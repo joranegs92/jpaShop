@@ -1,0 +1,1 @@
+EntityManager 과 JpaRepository 차이. 회사프로젝트에서는 트랜젝션관리와 영속성관리를 어떻게 하길래 저렇게 된건지 궁금하다..

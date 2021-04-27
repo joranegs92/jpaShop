@@ -1,24 +1,15 @@
-/*
 package domain;
 
-import lombok.Getter;
-import lombok.Setter;
-
-import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-@Table(name = "members")
-@Getter @Setter
 public class Member {
-    @Id @GeneratedValue
+
+    @Id
+    @GeneratedValue
     private Long id;
+    private String username;
 
-    private String name;
-    @Embedded
-    private Address address;
-
-    @OneToMany
-    private List<Order> orders = new ArrayList<>();
 }
-*/
