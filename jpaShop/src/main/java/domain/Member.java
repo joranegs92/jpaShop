@@ -1,7 +1,6 @@
 package domain;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.criterion.Order;
 
 import javax.persistence.*;
 import java.lang.reflect.Array;
@@ -12,7 +11,7 @@ import java.util.List;
 @Setter
 public class Member {
     @Id @GeneratedValue//sequence
-    @Column
+    @Column(name = "member_id")
     private Long id;
 
     private String name;
@@ -20,6 +19,7 @@ public class Member {
     @Embedded
     private Address address;
 
+    @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
 
