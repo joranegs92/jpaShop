@@ -18,6 +18,7 @@ public class Order{
 
     private String name;
 
+
     @ManyToOne
     @JoinColumn(name ="member_id")
     private Member member;
