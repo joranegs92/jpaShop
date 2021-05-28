@@ -6,6 +6,7 @@ spring:
     password: dkfktl92
 
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: create
     properties:

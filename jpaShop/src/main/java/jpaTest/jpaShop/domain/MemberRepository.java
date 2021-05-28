@@ -1,4 +1,4 @@
-package domain;
+package jpaTest.jpaShop.domain;
 
 import org.springframework.stereotype.Repository;
 

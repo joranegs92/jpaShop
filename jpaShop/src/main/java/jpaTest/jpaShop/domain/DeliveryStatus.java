@@ -1,4 +1,4 @@
-package domain;
+package jpaTest.jpaShop.domain;
 
 public class DeliveryStatus {
 }

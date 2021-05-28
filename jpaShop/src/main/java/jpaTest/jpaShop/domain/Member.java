@@ -1,9 +1,8 @@
-package domain;
+package jpaTest.jpaShop.domain;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 @Entity

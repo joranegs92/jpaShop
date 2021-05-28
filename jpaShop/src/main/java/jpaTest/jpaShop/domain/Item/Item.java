@@ -1,6 +1,6 @@
-package domain.Item;
+package jpaTest.jpaShop.domain.Item;
 
-import domain.Category;
+import jpaTest.jpaShop.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
