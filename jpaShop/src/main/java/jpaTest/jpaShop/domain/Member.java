@@ -1,4 +1,6 @@
 package jpaTest.jpaShop.domain;
+
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Member {
-    @Id @GeneratedValue//sequence
+    @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
 

@@ -1,4 +1,5 @@
 package jpaTest.jpaShop.domain;
 
-public class DeliveryStatus {
+public enum DeliveryStatus {
+    READY, COMP
 }
