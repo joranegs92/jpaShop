@@ -47,6 +47,8 @@ public class Order{
         this.delivery = delivery;
         delivery.setOrder(this);
     }
+
+    /*생성 메서드*/
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
         Order order = new Order();
         order.setMember(member);
@@ -56,7 +58,12 @@ public class Order{
         }
         order.setStatus(OrderStatus.ORDER);
         order.setOrderDate(LocalDateTime.now());
-        return null;
+        return order;
+    }
+    /*비즈니스 로직*/
+    //주문취소
+    public void cancle() {
+        
     }
 
 
