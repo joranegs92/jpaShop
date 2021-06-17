@@ -26,5 +26,8 @@ public abstract class Item{
     private List<Category> categories = new ArrayList<>();
 
 
+    public void addStock(int quantity) {
+        this.stockQuantity += quantity;
+    }
 
 }

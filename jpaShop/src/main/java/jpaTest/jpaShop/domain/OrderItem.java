@@ -27,5 +27,8 @@ public class OrderItem {
 
     private int count;
 
+    private void cancle() {
+        getItem().addStock(count);
+    }
 
 }

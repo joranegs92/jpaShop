@@ -63,7 +63,15 @@ public class Order{
     /*비즈니스 로직*/
     //주문취소
     public void cancle() {
-        
+        if(delivery.getStatus() == DeliveryStatus.COMP) {
+            throw new IllegalStateException("이미 배송완료된 상품은 취소가 불가능합니다");
+        }
+        this.setStatus(OrderStatus.CANCLE);
+
+        //재고원복
+        for(OrderItem orderItem : orderItems) {
+            orderItem.cancle(orderItem);
+        }
     }
 
 
