@@ -70,8 +70,16 @@ public class Order{
 
         //재고원복
         for(OrderItem orderItem : orderItems) {
-            orderItem.cancle(orderItem);
+            orderItem.cancel();
         }
+    }
+    //전체주문가격조회
+    public int getTotalPrice() {
+        int totalPrice = 0;
+        for (OrderItem orderItem :orderItems){
+            totalPrice += orderItem.getTotalPrice();
+        }
+        return totalPrice;
     }
 
 

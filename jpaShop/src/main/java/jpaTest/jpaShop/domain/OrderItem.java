@@ -27,8 +27,10 @@ public class OrderItem {
 
     private int count;
 
-    private void cancle() {
+    public void cancel() {
         getItem().addStock(count);
     }
-
+    public int getTotalPrice() {
+        return getOrderPrice() * getCount();
+    }
 }
