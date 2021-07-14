@@ -40,7 +40,9 @@ public abstract class Item{
 
 
         public void addStock(int quantity) {
-        this.stockQuantity += quantity;
+           this.stockQuantity += quantity;
     }
 
 }
+
+
