@@ -63,14 +63,14 @@ public class Order{
     /*비즈니스 로직*/
     //주문취소
     public void cancle() {
+        //추후에 배송시작으로 변경해야함
         if(delivery.getStatus() == DeliveryStatus.COMP) {
             throw new IllegalStateException("이미 배송완료된 상품은 취소가 불가능합니다");
         }
         this.setStatus(OrderStatus.CANCLE);
-
         //재고원복
         for(OrderItem orderItem : orderItems) {
-            orderItem.cancel();
+            orderItem.cancle();
         }
     }
     //전체주문가격조회
@@ -82,5 +82,8 @@ public class Order{
         return totalPrice;
     }
 
+    //검색
+/*    public List<Order> findOrders(){
 
+    }*/
 }

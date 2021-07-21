@@ -38,9 +38,10 @@ public abstract class Item{
 
         this.stockQuantity = restStock;
 
+    }
 
-        public void addStock(int quantity) {
-           this.stockQuantity += quantity;
+    public void addStock(int qantity) {
+        this.stockQuantity += qantity;
     }
 
 }
