@@ -17,8 +17,6 @@ public class OrderItem {
     @Column(name = "order_item_id")
     private Long id;
 
-    protected OrderItem() {}
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;
