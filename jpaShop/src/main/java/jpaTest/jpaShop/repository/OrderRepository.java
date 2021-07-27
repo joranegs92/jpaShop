@@ -2,10 +2,13 @@ package jpaTest.jpaShop.repository;
 
 import jpaTest.jpaShop.domain.Order;
 import jpaTest.jpaShop.service.OrderSearch;
+import jpaTest.jpaShop.service.OrderService;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.criterion.CriteriaQuery;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Repository
@@ -22,6 +25,7 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
+/*    //동적쿼리
     public List<Order> findAll(OrderSearch orderSearch) {
         em.createQuery("select o from Order o join o.member m" +
                         "where o.status =:status " +
@@ -31,5 +35,35 @@ public class OrderRepository {
                 .setMaxResults(1000)//최대 1000건
                 .getResultList();
 
-    }
+    }*/
+  /*  public List<Order> findAllByCriteria(OrderSearch orderSearch) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Order> cq = cb.createQuery(Order.class);
+        Root<Order> o = cq.from(Order.class);
+        Join<Order, Member> m = o.join("member", JoinType.INNER); //회원과 조인
+        List<Predicate> criteria = new ArrayList<>();
+
+//주문 상태 검색
+
+        if (orderSearch.getOrderStatus() != null) {
+            Predicate status = cb.equal(o.get("status"),
+                    orderSearch.getOrderStatus());
+            criteria.add(status);
+
+        }
+
+//회원 이름 검색
+
+        if (StringUtils.hasText(orderSearch.getMemberName())) {
+            Predicate name =
+                    cb.like(m.<String>get("name"), "%" +
+                            orderSearch.getMemberName() + "%");
+            criteria.add(name);
+        }
+        cq.where(cb.and(criteria.toArray(new Predicate[criteria.size()])));
+        TypedQuery<Order> query = em.createQuery(cq).setMaxResults(1000); //최대
+        1000건
+
+        return query.getResultList();
+    }*/
 }
