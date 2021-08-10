@@ -4,7 +4,9 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: dkfktl92
-
+  server:
+    port: 8081
+    context-path: /api
   jpa:
     open-in-view: false
     hibernate:

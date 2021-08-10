@@ -1,4 +1,4 @@
-package jpaTest.jpaShop.domain.Item;
+package jpaTest.jpaShop.domain.item;
 
 import jpaTest.jpaShop.domain.Category;
 import jpaTest.jpaShop.exception.NotEnoughStockException;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) //앨범 무비 북이 여기테이블에속하게 만들거다 , 싱글테이블
-@DiscriminatorColumn(name = "dtype")
+@DiscriminatorColumn(name = "DTYPE")
 @Getter @Setter
 public abstract class Item{
     @Id

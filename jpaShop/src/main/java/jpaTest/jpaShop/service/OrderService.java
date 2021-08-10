@@ -1,7 +1,7 @@
 package jpaTest.jpaShop.service;
 
 import jpaTest.jpaShop.domain.Delivery;
-import jpaTest.jpaShop.domain.Item.Item;
+import jpaTest.jpaShop.domain.item.Item;
 import jpaTest.jpaShop.domain.Member;
 import jpaTest.jpaShop.domain.Order;
 import jpaTest.jpaShop.domain.OrderItem;

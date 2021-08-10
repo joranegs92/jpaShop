@@ -12,6 +12,6 @@ public class HomeController {
     @RequestMapping("/")
     public String home(){
         log.info("home Controller");
-        return "home";
+        return "home"; //home.jsp 파일로 찾아가서 타임리프파일을 찾아간다 .
     }
 }

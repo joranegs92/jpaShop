@@ -1,6 +1,6 @@
 package jpaTest.jpaShop.service;
 
-import jpaTest.jpaShop.domain.Item.Item;
+import jpaTest.jpaShop.domain.item.Item;
 import jpaTest.jpaShop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

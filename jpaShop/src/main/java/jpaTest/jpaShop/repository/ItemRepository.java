@@ -1,6 +1,6 @@
 package jpaTest.jpaShop.repository;
 
-import jpaTest.jpaShop.domain.Item.Item;
+import jpaTest.jpaShop.domain.item.Item;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +12,6 @@ import java.util.List;
 public class ItemRepository {
 
     private final EntityManager em;
-    private final Item item;
 
     public void save(Item item) {
         if(item.getId() == null) {
