@@ -13,7 +13,6 @@ public class ItemRepository {
 
     /*autowired*/
     private final EntityManager em;
-    private final Item item;
 
     public void save(Item item) {
         if(item.getId() == null) {
